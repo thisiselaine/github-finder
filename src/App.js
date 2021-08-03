@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar } from './components/layout/Navbar';
-import UserItem from './components/users/UserItem';
+// eslint-disable-next-line
+import Users from './components/users/Users';
 import './App.css';
 
 // class based component
@@ -9,7 +10,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Navbar />
-      </div> 
+        <div className='container'>
+          <Users />
+        </div>
+      </div>
     );
   }
 }
