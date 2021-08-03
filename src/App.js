@@ -4,14 +4,14 @@ import './App.css';
 // class based component
 class App extends Component {
   render() {
-    // this gives us same output without jsx
-    // return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'Hello from React'));
-    // use react.fragment whenever you don't have parent element 
+    const name = 'John Doe';
+    const loading = false;
+    const showName = false; 
+
     return (
-      // this looks like html but is actually jsx 
-      // everything has to be enclosed within a parent element
       <div className='App'>
-        <h1>Hello from React</h1>
+        <h1>My App</h1>
+        { loading ? <h4> Loading... </h4> : <h1>Hello {showName && name}</h1>}
       </div> 
     );
   }
